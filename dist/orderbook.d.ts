@@ -18,7 +18,17 @@ export interface OrderBookSchema {
     bids: OrderBookItem[];
     asks: OrderBookItem[];
 }
+export interface OrderBookDbSchema {
+    _id?: any;
+    ts: number;
+    exchange?: string;
+    c: number;
+    bids: OrderBookItem[];
+    asks: OrderBookItem[];
+    v?: number;
+}
 export interface OrderBookItem {
     a: number;
     r: number;
 }
+export declare type OrderBookSchemaV2 = number[];

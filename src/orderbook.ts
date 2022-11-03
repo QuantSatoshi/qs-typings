@@ -21,7 +21,19 @@ export interface OrderBookSchema {
   asks: OrderBookItem[];
 }
 
+export interface OrderBookDbSchema {
+  _id?: any;
+  ts: number; // server timestamp
+  exchange?: string; // do not save to db
+  c: number; // product / pairDb & exchange code
+  bids: OrderBookItem[];
+  asks: OrderBookItem[];
+  v?: number;
+}
+
 export interface OrderBookItem {
   a: number;
   r: number;
 }
+
+export type OrderBookSchemaV2 = number[];
