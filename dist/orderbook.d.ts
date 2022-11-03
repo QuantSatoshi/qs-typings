@@ -1,5 +1,6 @@
 export interface ObStreamShared {
     c: number;
+    pair?: string;
     b?: number[][];
     a?: number[][];
     ts: number;

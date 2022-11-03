@@ -1,5 +1,6 @@
 export interface ObStreamShared {
   c: number; // pair code
+  pair?: string; // override
   b?: number[][]; // price, amount, sorted from best to worst
   a?: number[][]; // price, amount, sorted from best to worst
   ts: number; // timestamp in ms
