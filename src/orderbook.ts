@@ -29,6 +29,7 @@ export interface OrderBookDbSchema {
   bids: OrderBookItem[];
   asks: OrderBookItem[];
   v?: number;
+  pairDb?: string;
 }
 
 export interface OrderBookItem {

@@ -36,6 +36,7 @@ export namespace Inst {
     amountCurrency: number;
     postOnly?: boolean;
     isClose?: boolean;
+    customOrderId?: string;
   }
 
   export interface UpdateOrder extends SharedProps {
@@ -46,6 +47,7 @@ export namespace Inst {
     amountCurrency: number;
     postOnly?: boolean;
     isClose?: boolean;
+    customOrderId?: string;
   }
 
   export interface CreateStopLimitOrder extends SharedProps {
@@ -89,7 +91,7 @@ export namespace InstSpot {
     ts?: number;
     isSerial?: boolean;
     pairDb: string;
-    secondExchange?: boolean;
+    isSpot: true;
   }
 
   export interface CancelAllOrders extends SharedProps {
@@ -108,6 +110,7 @@ export namespace InstSpot {
     price: number;
     amountAsset: number;
     postOnly?: boolean;
+    customOrderId?: string;
   }
 
   export interface UpdateOrder extends SharedProps {
@@ -117,6 +120,7 @@ export namespace InstSpot {
     side: SignalBuySell;
     amountAsset: number;
     postOnly?: boolean;
+    customOrderId?: string;
   }
 
   export interface CreateStopLimitOrder extends SharedProps {

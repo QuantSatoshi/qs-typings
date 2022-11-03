@@ -1,5 +1,5 @@
-export declare type TradeDbSchemaV2 = number[];
 export declare type SignalBuySell = 'buy' | 'sell';
+export declare type TradeDbSchemaV2 = number[];
 export interface FundingSchema {
     ts: number;
     rate: number;

@@ -1,6 +1,7 @@
+export type SignalBuySell = 'buy' | 'sell';
+
 // const [ ts, s, r ,a , c ] = doc;
 export type TradeDbSchemaV2 = number[];
-export type SignalBuySell = 'buy' | 'sell';
 
 export interface FundingSchema {
   ts: number;
