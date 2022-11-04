@@ -15,14 +15,17 @@ export interface InternalOb {
   idx?: number;
 }
 
-export interface OrderBookSchema {
-  ts: Date;
-  pair: string;
+export interface OrderBookBase {
   bids: OrderBookItem[];
   asks: OrderBookItem[];
 }
 
-export interface OrderBookDbSchema {
+export interface OrderBookDataSchema extends OrderBookBase {
+  ts: Date;
+  pair: string; // for raw orderbook schema data fetching
+}
+
+export interface OrderBookSchema extends OrderBookBase {
   _id?: any;
   ts: number; // server timestamp
   exchange?: string; // do not save to db
