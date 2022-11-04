@@ -19,7 +19,10 @@ export interface OrderBookBase {
 }
 export interface OrderBookDataSchema extends OrderBookBase {
     ts: Date;
-    pair: string;
+    pair?: string;
+    exchange?: string;
+    code?: number;
+    v?: number;
 }
 export interface OrderBookSchema extends OrderBookBase {
     _id?: any;

@@ -20,9 +20,13 @@ export interface OrderBookBase {
   asks: OrderBookItem[];
 }
 
+// schema for data fetching
 export interface OrderBookDataSchema extends OrderBookBase {
   ts: Date;
-  pair: string; // for raw orderbook schema data fetching
+  pair?: string; // for raw orderbook schema data fetching
+  exchange?: string; // do not save to db
+  code?: number;
+  v?: number;
 }
 
 export interface OrderBookSchema extends OrderBookBase {
