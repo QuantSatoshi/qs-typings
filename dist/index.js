@@ -17,3 +17,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./orderbook"), exports);
 __exportStar(require("./trade"), exports);
 __exportStar(require("./instruction"), exports);
+__exportStar(require("./candle"), exports);
+__exportStar(require("./evm"), exports);
