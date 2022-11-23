@@ -29,10 +29,9 @@ export interface OrderBookSchema extends OrderBookBase {
     ts: number;
     exchange?: string;
     c: number;
-    bids: OrderBookItem[];
-    asks: OrderBookItem[];
     v?: number;
     pairDb?: string;
+    pair?: string;
 }
 export interface OrderBookItem {
     a: number;
