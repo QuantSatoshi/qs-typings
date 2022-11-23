@@ -1,6 +1,6 @@
 export type SignalBuySell = 'buy' | 'sell';
 
-// const [ ts, s, r ,a , c ] = doc;
+// const [ ts, s, r ,a , c, t, delivery_code] = doc;
 export type TradeDbSchemaV2 = number[];
 
 export interface FundingSchema {
