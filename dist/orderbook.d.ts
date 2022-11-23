@@ -28,7 +28,7 @@ export interface OrderBookSchema extends OrderBookBase {
     _id?: any;
     ts: number;
     exchange?: string;
-    c: number;
+    c?: number;
     v?: number;
     pairDb?: string;
     pair?: string;

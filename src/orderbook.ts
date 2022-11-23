@@ -33,7 +33,7 @@ export interface OrderBookSchema extends OrderBookBase {
   _id?: any;
   ts: number; // server timestamp
   exchange?: string; // do not save to db
-  c: number; // product / pairDb & exchange code
+  c?: number; // product / pairDb & exchange code
   v?: number;
   pairDb?: string; // store pair db format
   pair?: string; // store pair for exchange format
