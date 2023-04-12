@@ -69,7 +69,7 @@ export declare namespace Inst {
     interface MarketClosePosition extends SharedProps {
         op: OpCode.marketClosePosition;
     }
-    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder | LimitClosePosition | MarketClosePosition;
+    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder | LimitClosePosition | CreateLimitOrderBatch | MarketClosePosition;
 }
 export declare namespace InstSpot {
     interface SharedProps {
@@ -94,6 +94,10 @@ export declare namespace InstSpot {
         postOnly?: boolean;
         customOrderId?: string;
     }
+    interface CreateLimitOrderBatch extends SharedProps {
+        op: OpCode.CreateLimitOrderBatch;
+        orders: CreateLimitOrder[];
+    }
     interface UpdateOrder extends SharedProps {
         op: OpCode.updateOrder;
         orderId: string | number;
@@ -116,5 +120,5 @@ export declare namespace InstSpot {
         amountAsset?: number;
         price?: number;
     }
-    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder;
+    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | CreateLimitOrderBatch | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder;
 }

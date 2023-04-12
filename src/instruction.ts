@@ -89,6 +89,7 @@ export namespace Inst {
     | CreateStopLimitOrder
     | CreateMarketOrder
     | LimitClosePosition
+    | CreateLimitOrderBatch
     | MarketClosePosition;
 }
 
@@ -117,6 +118,11 @@ export namespace InstSpot {
     amountAsset: number;
     postOnly?: boolean;
     customOrderId?: string;
+  }
+
+  export interface CreateLimitOrderBatch extends SharedProps {
+    op: OpCode.CreateLimitOrderBatch;
+    orders: CreateLimitOrder[];
   }
 
   export interface UpdateOrder extends SharedProps {
@@ -151,6 +157,7 @@ export namespace InstSpot {
     | CancelAllOrders
     | CancelOrder
     | CreateLimitOrder
+    | CreateLimitOrderBatch
     | UpdateOrder
     | CreateStopLimitOrder
     | CreateMarketOrder;
