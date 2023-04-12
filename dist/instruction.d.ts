@@ -8,7 +8,7 @@ export declare enum OpCode {
     createMarketOrder = 5,
     limitClosePosition = 6,
     marketClosePosition = 7,
-    CreateLimitOrderBatch = 8
+    createLimitOrderBatch = 8
 }
 export declare namespace Inst {
     interface SharedProps {
@@ -35,7 +35,7 @@ export declare namespace Inst {
         customOrderId?: string;
     }
     interface CreateLimitOrderBatch extends SharedProps {
-        op: OpCode.CreateLimitOrderBatch;
+        op: OpCode.createLimitOrderBatch;
         orders: CreateLimitOrder[];
     }
     interface UpdateOrder extends SharedProps {
@@ -95,7 +95,7 @@ export declare namespace InstSpot {
         customOrderId?: string;
     }
     interface CreateLimitOrderBatch extends SharedProps {
-        op: OpCode.CreateLimitOrderBatch;
+        op: OpCode.createLimitOrderBatch;
         orders: CreateLimitOrder[];
     }
     interface UpdateOrder extends SharedProps {
