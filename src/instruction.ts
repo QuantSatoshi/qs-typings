@@ -9,6 +9,7 @@ export enum OpCode {
   createMarketOrder,
   limitClosePosition,
   marketClosePosition,
+  CreateLimitOrderBatch,
 }
 
 export namespace Inst {
@@ -37,6 +38,11 @@ export namespace Inst {
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
+  }
+
+  export interface CreateLimitOrderBatch extends SharedProps {
+    op: OpCode.CreateLimitOrderBatch;
+    orders: CreateLimitOrder[];
   }
 
   export interface UpdateOrder extends SharedProps {
