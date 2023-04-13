@@ -8,7 +8,8 @@ export declare enum OpCode {
     createMarketOrder = 5,
     limitClosePosition = 6,
     marketClosePosition = 7,
-    createLimitOrderBatch = 8
+    createLimitOrderBatch = 8,
+    updateOrdersBatch = 9
 }
 export declare namespace Inst {
     interface SharedProps {
@@ -48,6 +49,10 @@ export declare namespace Inst {
         isClose?: boolean;
         customOrderId?: string;
     }
+    interface UpdateOrdersBatch extends SharedProps {
+        op: OpCode.updateOrdersBatch;
+        orders: UpdateOrder[];
+    }
     interface CreateStopLimitOrder extends SharedProps {
         op: OpCode.createStopLimitOrder;
         side: SignalBuySell;
@@ -69,7 +74,7 @@ export declare namespace Inst {
     interface MarketClosePosition extends SharedProps {
         op: OpCode.marketClosePosition;
     }
-    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder | LimitClosePosition | CreateLimitOrderBatch | MarketClosePosition;
+    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | CreateLimitOrderBatch | UpdateOrder | UpdateOrdersBatch | CreateStopLimitOrder | CreateMarketOrder | LimitClosePosition | MarketClosePosition;
 }
 export declare namespace InstSpot {
     interface SharedProps {
@@ -107,6 +112,10 @@ export declare namespace InstSpot {
         postOnly?: boolean;
         customOrderId?: string;
     }
+    interface UpdateOrdersBatch extends SharedProps {
+        op: OpCode.updateOrdersBatch;
+        orders: UpdateOrder[];
+    }
     interface CreateStopLimitOrder extends SharedProps {
         op: OpCode.createStopLimitOrder;
         side: SignalBuySell;
@@ -120,5 +129,5 @@ export declare namespace InstSpot {
         amountAsset?: number;
         price?: number;
     }
-    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | CreateLimitOrderBatch | UpdateOrder | CreateStopLimitOrder | CreateMarketOrder;
+    type Instruction = CancelAllOrders | CancelOrder | CreateLimitOrder | CreateLimitOrderBatch | UpdateOrder | UpdateOrdersBatch | CreateStopLimitOrder | CreateMarketOrder;
 }

@@ -12,4 +12,5 @@ var OpCode;
     OpCode[OpCode["limitClosePosition"] = 6] = "limitClosePosition";
     OpCode[OpCode["marketClosePosition"] = 7] = "marketClosePosition";
     OpCode[OpCode["createLimitOrderBatch"] = 8] = "createLimitOrderBatch";
+    OpCode[OpCode["updateOrdersBatch"] = 9] = "updateOrdersBatch";
 })(OpCode = exports.OpCode || (exports.OpCode = {}));

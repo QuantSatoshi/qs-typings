@@ -10,6 +10,7 @@ export enum OpCode {
   limitClosePosition,
   marketClosePosition,
   createLimitOrderBatch,
+  updateOrdersBatch,
 }
 
 export namespace Inst {
@@ -56,6 +57,11 @@ export namespace Inst {
     customOrderId?: string;
   }
 
+  export interface UpdateOrdersBatch extends SharedProps {
+    op: OpCode.updateOrdersBatch;
+    orders: UpdateOrder[];
+  }
+
   export interface CreateStopLimitOrder extends SharedProps {
     op: OpCode.createStopLimitOrder;
     side: SignalBuySell;
@@ -85,11 +91,12 @@ export namespace Inst {
     | CancelAllOrders
     | CancelOrder
     | CreateLimitOrder
+    | CreateLimitOrderBatch
     | UpdateOrder
+    | UpdateOrdersBatch
     | CreateStopLimitOrder
     | CreateMarketOrder
     | LimitClosePosition
-    | CreateLimitOrderBatch
     | MarketClosePosition;
 }
 
@@ -135,6 +142,11 @@ export namespace InstSpot {
     customOrderId?: string;
   }
 
+  export interface UpdateOrdersBatch extends SharedProps {
+    op: OpCode.updateOrdersBatch;
+    orders: UpdateOrder[];
+  }
+
   export interface CreateStopLimitOrder extends SharedProps {
     op: OpCode.createStopLimitOrder;
     side: SignalBuySell;
@@ -159,6 +171,7 @@ export namespace InstSpot {
     | CreateLimitOrder
     | CreateLimitOrderBatch
     | UpdateOrder
+    | UpdateOrdersBatch
     | CreateStopLimitOrder
     | CreateMarketOrder;
 }
