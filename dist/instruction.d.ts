@@ -11,7 +11,7 @@ export declare enum OpCode {
     createLimitOrderBatch = 8,
     updateOrdersBatch = 9
 }
-export declare namespace Inst {
+export declare namespace InstFuture {
     interface SharedProps {
         secondExchange?: boolean;
         ts?: number;

@@ -13,7 +13,7 @@ export enum OpCode {
   updateOrdersBatch,
 }
 
-export namespace Inst {
+export namespace InstFuture {
   export interface SharedProps {
     secondExchange?: boolean;
     ts?: number;
