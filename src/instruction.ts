@@ -13,7 +13,7 @@ export enum OpCode {
   updateOrdersBatch,
 }
 
-export namespace InstFuture {
+export namespace Inst {
   export interface SharedProps {
     secondExchange?: boolean;
     ts?: number;
@@ -35,7 +35,7 @@ export namespace InstFuture {
     op: OpCode.createLimitOrder;
     side: SignalBuySell;
     price: number;
-    amount: number;
+    amountCurrency: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
@@ -51,7 +51,7 @@ export namespace InstFuture {
     orderId: string | number;
     price: number;
     side: SignalBuySell;
-    amount: number;
+    amountCurrency: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
@@ -66,13 +66,13 @@ export namespace InstFuture {
     op: OpCode.createStopLimitOrder;
     side: SignalBuySell;
     stopPrice: number;
-    amount: number;
+    amountCurrency: number;
   }
 
   export interface CreateMarketOrder extends SharedProps {
     op: OpCode.createMarketOrder;
     side: SignalBuySell;
-    amount: number;
+    amountCurrency: number;
     price?: number;
     isClose?: boolean;
   }
