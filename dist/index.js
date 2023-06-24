@@ -19,3 +19,4 @@ __exportStar(require("./trade"), exports);
 __exportStar(require("./instruction"), exports);
 __exportStar(require("./candle"), exports);
 __exportStar(require("./evm"), exports);
+__exportStar(require("./amm"), exports);
