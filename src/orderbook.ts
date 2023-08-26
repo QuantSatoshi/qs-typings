@@ -45,3 +45,6 @@ export interface OrderBookItem {
 }
 
 export type OrderBookSchemaV2 = number[];
+
+// [ts, bid, ask, bidSize, askSize, c]
+export type TickNum = number[];

@@ -38,3 +38,4 @@ export interface OrderBookItem {
     r: number;
 }
 export declare type OrderBookSchemaV2 = number[];
+export declare type TickNum = number[];
