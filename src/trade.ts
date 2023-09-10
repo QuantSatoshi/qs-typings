@@ -1,5 +1,5 @@
 export type BUY = true;
-export type SELL = true;
+export type SELL = false;
 export type SignalBuySell = BUY | SELL;
 
 // const [ ts, s, r ,a , c, t, delivery_code] = doc;
