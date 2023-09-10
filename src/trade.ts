@@ -1,6 +1,6 @@
-export type BUY = true;
-export type SELL = false;
-export type SignalBuySell = BUY | SELL;
+export const BUY = true;
+export const SELL = false;
+export type SignalBuySell = boolean;
 
 // const [ ts, s, r ,a , c, t, delivery_code] = doc;
 export type TradeDbSchemaV2 = number[];
