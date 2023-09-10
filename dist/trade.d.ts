@@ -1,4 +1,6 @@
-export declare type SignalBuySell = 'buy' | 'sell';
+export declare type BUY = true;
+export declare type SELL = true;
+export declare type SignalBuySell = BUY | SELL;
 export declare type TradeDbSchemaV2 = number[];
 export interface FundingSchema {
     ts: number;

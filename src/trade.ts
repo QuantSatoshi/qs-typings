@@ -1,4 +1,6 @@
-export type SignalBuySell = 'buy' | 'sell';
+export type BUY = true;
+export type SELL = true;
+export type SignalBuySell = BUY | SELL;
 
 // const [ ts, s, r ,a , c, t, delivery_code] = doc;
 export type TradeDbSchemaV2 = number[];
