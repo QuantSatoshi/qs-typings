@@ -34,6 +34,7 @@ export declare namespace InstFuture {
         postOnly?: boolean;
         isClose?: boolean;
         customOrderId?: string;
+        ioc?: boolean;
     }
     interface CreateLimitOrderBatch extends SharedProps {
         op: OpCode.createLimitOrderBatch;
