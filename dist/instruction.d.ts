@@ -137,6 +137,7 @@ export interface PositionQS {
     side: SignalBuySell;
     price: number;
     pairDb: string;
+    exchange?: string;
     liquidationPrice?: number;
     maintMargin?: number;
     raw?: any;
