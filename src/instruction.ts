@@ -176,3 +176,14 @@ export namespace InstSpot {
     | CreateStopLimitOrder
     | CreateMarketOrder;
 }
+
+export interface PositionQS {
+  amount: number;
+  side: SignalBuySell;
+  price: number;
+  pairDb: string;
+  liquidationPrice?: number;
+  maintMargin?: number;
+  raw?: any;
+  subPositions?: PositionQS[];
+}
