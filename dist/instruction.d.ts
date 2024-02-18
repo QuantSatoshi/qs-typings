@@ -142,3 +142,15 @@ export interface PositionQS {
     raw?: any;
     subPositions?: PositionQS[];
 }
+export interface OrderResponseQS {
+    side: SignalBuySell;
+    amountFilled: number;
+    amount: number;
+    price: number;
+    pairDb: string;
+    orderId: string | number;
+    isClose?: boolean;
+    isActive?: boolean;
+    ts?: number;
+    customOrderId?: string;
+}
