@@ -148,6 +148,7 @@ export interface OrderResponseQS {
     amount: number;
     price: number;
     pairDb: string;
+    exchange?: string;
     orderId: string | number;
     isClose?: boolean;
     isActive?: boolean;
