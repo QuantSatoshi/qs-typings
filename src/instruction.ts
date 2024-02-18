@@ -35,7 +35,7 @@ export namespace InstFuture {
     op: OpCode.createLimitOrder;
     side: SignalBuySell;
     price: number;
-    amountCurrency: number;
+    amountAsset: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
@@ -52,7 +52,7 @@ export namespace InstFuture {
     orderId: string | number;
     price: number;
     side: SignalBuySell;
-    amountCurrency: number;
+    amountAsset: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
@@ -67,13 +67,13 @@ export namespace InstFuture {
     op: OpCode.createStopLimitOrder;
     side: SignalBuySell;
     stopPrice: number;
-    amountCurrency: number;
+    amountAsset: number;
   }
 
   export interface CreateMarketOrder extends SharedProps {
     op: OpCode.createMarketOrder;
     side: SignalBuySell;
-    amountCurrency: number;
+    amountAsset: number;
     price?: number;
     isClose?: boolean;
   }
