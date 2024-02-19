@@ -156,3 +156,19 @@ export interface OrderResponseQS {
     ts?: number;
     customOrderId?: string;
 }
+export interface HistoryOrderResponseQs {
+    side: SignalBuySell;
+    price: number;
+    amount: number;
+    amountFilled: number;
+    pairDb: string;
+    orderId: string | number;
+    execId: string | number;
+    customOrderId?: string;
+    fee?: number;
+    isMaker?: boolean;
+    customOrderIdRaw?: number | string;
+    ts?: number;
+    tsUpdated?: number;
+    pnl: number;
+}
