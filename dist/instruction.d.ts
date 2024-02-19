@@ -165,8 +165,10 @@ export interface HistoryOrderResponseQs {
     orderId: string | number;
     execId: string | number;
     customOrderId?: string;
+    isClose?: boolean;
     fee?: number;
     isMaker?: boolean;
+    isLiquidation?: boolean;
     customOrderIdRaw?: number | string;
     ts?: number;
     tsUpdated?: number;
