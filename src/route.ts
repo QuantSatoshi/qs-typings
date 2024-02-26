@@ -10,8 +10,6 @@ export interface RouteInfoDb extends RouteInfoBase {
 }
 
 export interface RouteInfo extends RouteInfoBase {
-  amountIn: string;
-  amountOut: string;
   amounts: string[];
   amountUSD?: number;
   sqrtPriceX96Limit: string[];
