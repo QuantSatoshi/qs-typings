@@ -124,6 +124,7 @@ export namespace InstSpot {
     side: SignalBuySell;
     price: number;
     amountAsset: number;
+    icebergAmountAsset?: number;
     postOnly?: boolean;
     customOrderId?: string;
   }
@@ -139,6 +140,7 @@ export namespace InstSpot {
     price: number;
     side: SignalBuySell;
     amountAsset: number;
+    icebergAmountAsset?: number;
     postOnly?: boolean;
     customOrderId?: string;
   }
@@ -193,6 +195,7 @@ export interface OrderResponseQS {
   side: SignalBuySell;
   amountFilled: number;
   amount: number;
+  icebergAmount?: number;
   price: number;
   pairDb: string;
   exchange?: string;
@@ -208,6 +211,7 @@ export interface HistoryOrderResponseQs {
   price: number;
   amount: number;
   amountFilled: number;
+  icebergAmount?: number;
   pairDb: string;
   orderId: string | number;
   execId: string | number;
