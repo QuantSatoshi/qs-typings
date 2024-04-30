@@ -31,6 +31,7 @@ export declare namespace InstFuture {
         side: SignalBuySell;
         price: number;
         amountAsset: number;
+        icebergAmountAsset?: number;
         postOnly?: boolean;
         isClose?: boolean;
         customOrderId?: string;
@@ -46,6 +47,7 @@ export declare namespace InstFuture {
         price: number;
         side: SignalBuySell;
         amountAsset: number;
+        icebergAmountAsset?: number;
         postOnly?: boolean;
         isClose?: boolean;
         customOrderId?: string;

@@ -26,6 +26,7 @@ export namespace InstFuture {
     // optional cancel orders filtered by side
     side?: SignalBuySell;
   }
+
   export interface CancelOrder extends SharedProps {
     op: OpCode.cancelOrder;
     orderId: string | number;
@@ -36,6 +37,7 @@ export namespace InstFuture {
     side: SignalBuySell;
     price: number;
     amountAsset: number;
+    icebergAmountAsset?: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
@@ -53,6 +55,7 @@ export namespace InstFuture {
     price: number;
     side: SignalBuySell;
     amountAsset: number;
+    icebergAmountAsset?: number;
     postOnly?: boolean;
     isClose?: boolean;
     customOrderId?: string;
