@@ -42,6 +42,7 @@ export namespace InstFuture {
     isClose?: boolean;
     customOrderId?: string;
     ioc?: boolean;
+    goodTillDate?: number;
   }
 
   export interface CreateLimitOrderBatch extends SharedProps {
