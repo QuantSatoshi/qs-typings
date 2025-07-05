@@ -52,6 +52,7 @@ export declare namespace InstFuture {
         postOnly?: boolean;
         isClose?: boolean;
         customOrderId?: string;
+        goodTillDate?: number;
     }
     interface UpdateOrdersBatch extends SharedProps {
         op: OpCode.updateOrdersBatch;
